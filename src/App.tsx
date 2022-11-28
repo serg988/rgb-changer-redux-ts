@@ -3,15 +3,16 @@ import { useAppDispatch, useAppSelector } from './app/hooks'
 import { ColorSwatch } from './components/ColorSwatch'
 import { ColorInputs } from './components/ColorInputs'
 import { ColorSliders } from './components/ColorSliders'
+import { themes } from './components/themes'
+import './style.scss'
 
 const Application = () => {
-  const themes = useAppSelector((state) => state.rgb)
 
   return (
     <main
-      // style={{
-      //   ...themes.dark,
-      // }}
+      style={{
+        ...themes.dark,
+      }}
     >
       <ColorSwatch />
       {/* <ColorInputs {...rgb} /> */}

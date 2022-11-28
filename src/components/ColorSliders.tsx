@@ -3,6 +3,7 @@ import { ColorSlider } from './ColorSlider'
 import { AdjustmentAction } from '../features/rgb/rgbSlice'
 import { RGBColorType } from '../types'
 import { useAppDispatch, useAppSelector } from '../app/hooks'
+import {adjust_red, adjust_green, adjust_blue} from '../features/rgb/rgbSlice'
 
 interface ColorSidersProps extends RGBColorType {
   dispatch: Dispatch<AdjustmentAction>
@@ -13,15 +14,15 @@ export const ColorSliders = () => {
   const { red, green, blue } = useAppSelector(state=>state.rgb)
 
   const adjustRed = (event: ChangeEvent<HTMLInputElement>) => {
-    dispatch({ type: 'ADJUST_RED', payload: +event.target.value })
+    dispatch( adjust_red(+event.target.value))
   }
 
   const adjustGreen = (event: ChangeEvent<HTMLInputElement>) => {
-    dispatch({ type: 'ADJUST_GREEN', payload: +event.target.value })
+    dispatch(adjust_green(+event.target.value))
   }
 
   const adjustBlue = (event: ChangeEvent<HTMLInputElement>) => {
-    dispatch({ type: 'ADJUST_BLUE', payload: +event.target.value })
+    dispatch(adjust_blue(+event.target.value))
   }
 
   return (
