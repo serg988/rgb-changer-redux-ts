@@ -52,6 +52,8 @@ form {
 }
 
 main {
+  display: flex;
+  justify-content: space-between;
   background-color: white;
   box-shadow: 1px 1px 3px #666;
   border: 5px solid lighten($primary-color, 40%);
@@ -59,13 +61,13 @@ main {
   margin: 2em auto;
   padding: 1em;
   width: 90%;
-  height: 90vh;
+  height: 80vh;
 }
 
 .color-swatch {
-  width: 800px;
-  height: 500px;
-  margin: auto;
+  width: 40%;
+  height: 100%;
+  // margin: auto;
   display: flex;
   align-items: center;
   justify-content: center;
