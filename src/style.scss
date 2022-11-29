@@ -58,13 +58,21 @@ main {
   font-weight: 700;
   margin: 2em auto;
   padding: 1em;
-  width: 600px;
+  width: 90%;
+  height: 90vh;
 }
 
 .color-swatch {
-  width: 400px;
-  height: 400px;
+  width: 800px;
+  height: 500px;
   margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .colorValue {
+    margin: 50px;
+    font-size: 2em;
+  }
 }
 
 .color-inputs,
