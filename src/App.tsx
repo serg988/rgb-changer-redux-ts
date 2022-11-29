@@ -20,6 +20,7 @@ const Application = () => {
       <main
         style={{
           ...themes.dark,
+          backgroundColor: hex 
         }}
       >
         <SketchPicker

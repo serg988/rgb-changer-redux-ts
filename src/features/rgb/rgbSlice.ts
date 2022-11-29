@@ -20,7 +20,7 @@ const initialState: RGBColorType = {
 export const rgbSlice = createSlice({
   name: 'rgb',
   initialState,
- 
+
   reducers: {
     adjust_red: (state, action: PayloadAction<number>) => {
       state.red = action.payload
@@ -35,8 +35,8 @@ export const rgbSlice = createSlice({
       state.hex = rgbToHex(state.red, state.green, state.blue)
     },
     set_hex: (state, action: PayloadAction<string>) => {
-      // state = { red: 0, green: 0, blue: 255 }
       const col = hexToRgb(action.payload)
+      // state = { ...col }
       state = Object.assign(state, col)
     },
   },
